@@ -7,7 +7,7 @@ struct rectangle                       //creating a structure
     int length;                 
     int breadth;
 };
-pair<int, int> intialize(struct rectangle *r, int l, int b)       //intialize value to struct by using function
+pair<int, int> intialize(struct rectangle *r, int l, int b)       //intialize value to struct by using function and pass struct address
 {
     return make_pair(r->length = l, r->breadth = b);               //make_pair is keyword which is use to return pair of value in a single function
 }
