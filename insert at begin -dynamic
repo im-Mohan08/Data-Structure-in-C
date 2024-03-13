@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include<iostream>
+ struct node
+ {
+     int data;
+     struct node *next;
+ };
+//struct node head;
+void begin(struct node**h, int data)
+ {
+     struct node *n=new (struct node);
+     //struct node *n=(struct node*)malloc(sizeof(struct node));
+     n->data=data;
+     n->next=NULL;
+     n->next=*h;
+     *h=n;
+ }
+ void display(struct node *temp)
+ { 
+     while(temp!=NULL)
+    {
+     printf("%d\n",temp->data);
+     temp=temp->next;
+    }
+ }
+int main()
+{
+   
+      struct node *head=NULL;
+      begin(&head,1);
+      begin(&head,2);
+      begin(&head,3);
+      display(head);
+    return 0;
+}
